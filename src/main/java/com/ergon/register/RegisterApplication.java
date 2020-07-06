@@ -10,13 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class RegisterApplication {
-    @Bean
-    public CommandLineRunner commandLineRunner(@Autowired ClientRepository clientRepository){
-        return args -> {
-            Client client = Client.builder().cpf("12345678911").name("testandoName").build();
-            clientRepository.save(client);
-        };
-    }
+
     public static void main(String[] args) {
         SpringApplication.run(RegisterApplication.class, args);
     }
